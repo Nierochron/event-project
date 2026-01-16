@@ -1,6 +1,12 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 body {
   font-family: "Montserrat", sans-serif;
+  width: 100%;
+  background-image: url("../images/pic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(14, 14, 14);
 }
 
 h1,
@@ -24,4 +30,39 @@ a {
 button {
   border: none;
   cursor: pointer;
+}
+
+.hero-title {
+  color: #DC56C5;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.hero-div-input {
+  display: flex;
+  gap: 100px;
+  margin: 0 35%;
+}
+
+.main-events-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.event-name {
+  color: #DC56C5;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.event-time {
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
 }/*# sourceMappingURL=index.css.map */

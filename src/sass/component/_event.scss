@@ -1,0 +1,22 @@
+.main-events-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.event-name{
+    color: #DC56C5;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.event-time{
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
