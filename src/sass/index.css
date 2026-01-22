@@ -3,8 +3,8 @@ body {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   background-image: url("../images/pic.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
+  background-position: top;
   background-repeat: no-repeat;
   background-color: rgb(14, 14, 14);
 }
@@ -42,7 +42,8 @@ button {
 .hero-div-input {
   display: flex;
   gap: 100px;
-  margin: 0 35%;
+  justify-content: center;
+  padding-top: 30px;
 }
 
 .main-events-container {
