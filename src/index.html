@@ -11,7 +11,7 @@
 </head>
 <body>
   <header class="header">
-    <a href=""><img src="./images/logo.png" alt="logo"></a>
+    <a href=""><img src="./images/logo.png" alt="logo" class="header-logo"></a>
   </header>
 
   <main class="main">
@@ -20,8 +20,11 @@
     <h1 class="hero-title">FIND BEST EVENTS <br> AROUND THE WORLD</h1>
 
     <div class="hero-div-input">
-  <input type="search" id="heroInputSearch" class="hero-input" placeholder="Start searching">
-  <input type="text" id="heroInputCountry" class="hero-input" placeholder="Choose country">
+  <input type="search" id="heroInputSearch" class="hero-action-element" placeholder="Start searching">
+  <button type="button" id="heroBtnCountry" class="hero-action-element">Choose country</button>
+
+    <div class="countries-block" role="listbox"></div>
+    
   </div>
   </div>
   </section>

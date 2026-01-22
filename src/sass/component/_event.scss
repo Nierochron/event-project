@@ -5,9 +5,16 @@
   padding: 0;
   list-style: none;
   text-align: center;
+  margin: 0 8%;
   margin-top: 50px;
 }
 
+.event-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 30%;
+}
 
 .event-name{
     color: #DC56C5;
@@ -18,5 +25,11 @@
 .event-time{
     font-weight: 400;
     font-size: 16px;
+    color: #FFFFFF;
+}
+
+.event-area{
+    font-weight: 600;
+    font-size: 14px;
     color: #FFFFFF;
 }

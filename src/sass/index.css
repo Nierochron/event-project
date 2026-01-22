@@ -32,30 +32,101 @@ button {
   cursor: pointer;
 }
 
+header {
+  position: relative;
+  height: 80px;
+}
+
+.header-logo {
+  position: absolute;
+}
+
+.countries-block {
+  position: absolute;
+  top: 44px;
+  right: 20px;
+  width: 90%;
+  display: none;
+  max-height: 250px;
+  background-color: #aea9a9;
+  overflow: auto;
+}
+
+.countries-block.is-open {
+  display: block;
+}
+
+.country-item {
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
 .hero-title {
-  color: #DC56C5;
+  color: #dc56c5;
   font-size: 50px;
   font-weight: 900;
   text-align: center;
+  margin-top: -20px;
 }
 
 .hero-div-input {
   display: flex;
-  gap: 100px;
+  gap: 50px;
   justify-content: center;
-  padding-top: 30px;
+  margin-top: 70px;
+  margin-bottom: 170px;
 }
 
-.hero-input {
+.hero-action-element {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: #939393;
+  border: 1px solid rgba(255, 255, 255, 0);
   font-weight: 400;
   font-size: 16px;
-  padding: 10px 13px;
+  padding: 12px 32px;
+  outline: none;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+  transition: border 300ms ease;
+}
+.hero-action-element:hover {
+  border: 1px solid rgb(188, 188, 188);
+}
+.hero-action-element::-moz-placeholder {
+  color: #939393;
+}
+.hero-action-element::placeholder {
+  color: #939393;
+}
+
+#heroInputSearch,
+#heroInputCountry {
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 13px 13px;
+  height: 40px;
+  padding-right: 10px;
+}
+
+#heroBtnCountry {
+  background-image: url("../images/svg/Polygon1.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 13px 13px;
+  height: 40px;
+  padding: 0 100px 0 30px;
+  color: #939393;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#heroInputSearch {
+  background-image: url("../images/svg/searchicon.svg");
 }
 
 .main-events-container {
@@ -65,7 +136,15 @@ button {
   padding: 0;
   list-style: none;
   text-align: center;
+  margin: 0 8%;
   margin-top: 50px;
+}
+
+.event-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 30%;
 }
 
 .event-name {
@@ -77,5 +156,11 @@ button {
 .event-time {
   font-weight: 400;
   font-size: 16px;
+  color: #FFFFFF;
+}
+
+.event-area {
+  font-weight: 600;
+  font-size: 14px;
   color: #FFFFFF;
 }/*# sourceMappingURL=index.css.map */

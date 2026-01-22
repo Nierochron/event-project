@@ -1,0 +1,14 @@
+<svg viewBox="0 0 29 20" fill="currentColor" width="46.4" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        :root, .palette0 {color: currentColor;
+            --color0: currentColor;
+        }
+    </style>
+    <path d="M3.2222 0H0v19.3333h3.2222z" />
+    <path d="M11.3266 0H8.1044l0 19.3333h3.2222z" />
+    <path d="M16.2088 0h-3.2222v19.3333h3.2222z" />
+    <path d="M28.9999 0h-4.7845v19.3333h4.7845z" />
+    <path d="M6.4445 0H4.8822l0 19.3333h1.5623z" />
+    <path d="M19.3333 0H17.771v19.3333h1.5623z" />
+    <path d="M22.5555 0h-1.5623v19.3333h1.5623z" />
+</svg>
