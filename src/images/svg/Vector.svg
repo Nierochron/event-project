@@ -1,8 +1,6 @@
 <svg viewBox="0 0 7 10" fill="none" width="22.4" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
-        :root, .palette0 {color: currentColor;
-            --color0: currentColor;
-        }
+        .palette0 { color: currentColor; --color0: currentColor; }
     </style>
     <path fill="currentColor" d="M3.5 0C1.5701 0 0 1.5593 0 3.476 0 5.885 3.5034 10 3.5034 10 3.5034 10 7 5.7665 7 3.476 7 1.5593 5.43 0 3.5 0zM4.556 4.4937C4.2648 4.7828 3.8825 4.9274 3.5 4.9274c-0.3824 0-0.7649-0.1446-1.056-0.4337-0.5823-0.5782-0.5823-1.5192 0-2.0975C2.726 2.1161 3.1011 1.9618 3.5 1.9618c0.3989 0 0.7739 0.1544 1.056 0.4344 0.5823 0.5783 0.5823 1.5193 0 2.0975z" />
 </svg>
