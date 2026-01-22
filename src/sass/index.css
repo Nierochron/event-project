@@ -46,6 +46,18 @@ button {
   padding-top: 30px;
 }
 
+.hero-input {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #939393;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 10px 13px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
 .main-events-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
