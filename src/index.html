@@ -1,42 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./sass/index.css">
-</head>
-<body>
-  <header class="header">
-    <a href=""><img src="./images/logo.png" alt="logo" class="header-logo"></a>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href=""
+        ><img src="./images/logo.png" alt="logo" class="header-logo"
+      /></a>
+    </header>
 
-  <main class="main">
-  <section class="hero">
-    <div class="container">
-    <h1 class="hero-title">FIND BEST EVENTS <br> AROUND THE WORLD</h1>
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">
+            FIND BEST EVENTS <br />
+            AROUND THE WORLD
+          </h1>
 
-    <div class="hero-div-input">
-  <input type="search" id="heroInputSearch" class="hero-action-element" placeholder="Start searching">
-  <button type="button" id="heroBtnCountry" class="hero-action-element">Choose country</button>
+          <div class="hero-div-input">
+            <input
+              type="search"
+              id="heroInputSearch"
+              class="hero-action-element"
+              placeholder="Start searching"
+            />
+            <button
+              type="button"
+              id="heroBtnCountry"
+              class="hero-action-element"
+            >
+              Choose country
+            </button>
 
-    <div class="countries-block" role="listbox"></div>
-    
-  </div>
-  </div>
-  </section>
-  <section class="event">
-    <div class="container">
-      <ul class="main-events-container">
-        
-      </ul>
+            <div class="countries-block"></div>
+          </div>
+        </div>
+      </section>
+      <section class="event">
+        <div class="container">
+          <ul class="main-events-container"></ul>
+          <div class="pagination-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p
+        class="footer-text"
+        style="text-align: center; color: #939393; margin: 60px 0 20px"
+      >
+        © 2021 | All Rights Reserved | Developed with ♥ by GoIT Student
+      </p>
+    </footer>
+
+    <div class="modal-backdrop is-hidden">
+      <div class="modal">
+        <button class="btn-modal-close">✕</button>
+        <div class="modal-content"></div>
+      </div>
     </div>
-  </section>
-  </main>
 
-  <script type="module" src="./index.js"></script>
-</body>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
+
+<!-- Modal -->
+
+<!-- <p class="modal-event-name">${event.name}</p>
+<span class="modal-location">${event._embedded.venues[0].country.name}, </span>
+<span class="modal-location">${event._embedded.venues[0].city.name}</span>
+<p class="modal-location">${event._embedded.venues[0].address.line1}</p>
+<p class="modal-time">${event.dates.start.localDate}</p>
+<p class="modal-time">${event.dates.start.localTime}</p> -->

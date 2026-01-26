@@ -35,7 +35,7 @@
 }
 
 #heroInputSearch,
-#heroInputCountry {
+#heroBtnCountry {
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 13px 13px;
@@ -45,18 +45,8 @@
 
 #heroBtnCountry {
   background-image: url('../images/svg/Polygon1.svg');
-  background-repeat: no-repeat;
-  background-position: right 20px center;
-  background-size: 13px 13px;
-  height: 40px;
   padding: 0 100px 0 30px;
   color: #939393;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 400;
 }
 
 #heroInputSearch {

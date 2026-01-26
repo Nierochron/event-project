@@ -1,7 +1,7 @@
 .main-events-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 50px;
   padding: 0;
   list-style: none;
   text-align: center;
@@ -9,11 +9,30 @@
   margin-top: 50px;
 }
 
+.event-element{
+  position: relative;
+}
+
+.event-card-background{
+  position: absolute;
+  border: 1px solid #DC56C5;
+  height: 183px;
+  width: 253px;
+  border-radius: 50px 0;
+  right: 7%;
+  top: -8%;
+  z-index: -1;
+}
+
 .event-text-container{
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding: 0 30%;
+    gap: 2px;
+    margin-top: 8px;
+}
+
+.event-image{
+  border-radius: 50px 0;
 }
 
 .event-name{
@@ -32,4 +51,44 @@
     font-weight: 600;
     font-size: 14px;
     color: #FFFFFF;
+}
+
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.pagination-btn {
+  padding: 10px 15px;
+  border: 1px solid #DC56C5;
+  background-color: transparent;
+  color: #FFFFFF;
+  transition: background-color 300ms ease;
+  font-weight: 600;
+  border-radius: 15px 0;
+
+  &:hover{
+    background-color: #DC56C5;
+  }
+
+  &.active {
+    background-color: #DC56C5;
+  }
+}
+
+.pagination-nav-btn {
+  font-weight: 700;
+  min-width: 100px;
+}
+
+.pagination-dots {
+  color: #FFFFFF;
+  font-weight: 600;
+  padding-top: 20px;
 }
