@@ -127,7 +127,7 @@ header {
 
 .event-card-background {
   position: absolute;
-  border: 1px solid #DC56C5;
+  border: 1px solid #dc56c5;
   height: 183px;
   width: 253px;
   border-radius: 50px 0;
@@ -148,7 +148,7 @@ header {
 }
 
 .event-name {
-  color: #DC56C5;
+  color: #dc56c5;
   font-size: 16px;
   font-weight: 700;
 }
@@ -156,13 +156,13 @@ header {
 .event-time {
   font-weight: 400;
   font-size: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .event-area {
   font-weight: 600;
   font-size: 14px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .pagination-container {
@@ -177,27 +177,25 @@ header {
 
 .pagination-btn {
   padding: 10px 15px;
-  border: 1px solid #DC56C5;
+  border: 1px solid #dc56c5;
   background-color: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   transition: background-color 300ms ease;
-  font-weight: 600;
   border-radius: 15px 0;
 }
 .pagination-btn:hover {
-  background-color: #DC56C5;
+  background-color: #dc56c5;
 }
 .pagination-btn.active {
-  background-color: #DC56C5;
+  background-color: #dc56c5;
 }
 
 .pagination-nav-btn {
-  font-weight: 700;
   min-width: 100px;
 }
 
 .pagination-dots {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 600;
   padding-top: 20px;
 }

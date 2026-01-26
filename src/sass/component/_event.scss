@@ -9,13 +9,13 @@
   margin-top: 50px;
 }
 
-.event-element{
+.event-element {
   position: relative;
 }
 
-.event-card-background{
+.event-card-background {
   position: absolute;
-  border: 1px solid #DC56C5;
+  border: 1px solid #dc56c5;
   height: 183px;
   width: 253px;
   border-radius: 50px 0;
@@ -24,35 +24,34 @@
   z-index: -1;
 }
 
-.event-text-container{
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    margin-top: 8px;
+.event-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
 }
 
-.event-image{
+.event-image {
   border-radius: 50px 0;
 }
 
-.event-name{
-    color: #DC56C5;
-    font-size: 16px;
-    font-weight: 700;
+.event-name {
+  color: #dc56c5;
+  font-size: 16px;
+  font-weight: 700;
 }
 
-.event-time{
-    font-weight: 400;
-    font-size: 16px;
-    color: #FFFFFF;
+.event-time {
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
 }
 
-.event-area{
-    font-weight: 600;
-    font-size: 14px;
-    color: #FFFFFF;
+.event-area {
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
 }
-
 
 .pagination-container {
   display: flex;
@@ -66,29 +65,27 @@
 
 .pagination-btn {
   padding: 10px 15px;
-  border: 1px solid #DC56C5;
+  border: 1px solid #dc56c5;
   background-color: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   transition: background-color 300ms ease;
-  font-weight: 600;
   border-radius: 15px 0;
 
-  &:hover{
-    background-color: #DC56C5;
+  &:hover {
+    background-color: #dc56c5;
   }
 
   &.active {
-    background-color: #DC56C5;
+    background-color: #dc56c5;
   }
 }
 
 .pagination-nav-btn {
-  font-weight: 700;
   min-width: 100px;
 }
 
 .pagination-dots {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 600;
   padding-top: 20px;
 }

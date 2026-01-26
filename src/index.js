@@ -46,8 +46,7 @@ let query = '';
 // countriesBtn.addEventListener('click', handleBtnClick);
 
 async function getEvents() {
-  let url =
-    `${BASE_URL}?apikey=${API_KEY}&size=${size}&page=${page - 1}`;
+  let url = `${BASE_URL}?apikey=${API_KEY}&size=${size}&page=${page - 1}`;
 
   if (query) {
     url += `&keyword=${query}`;
@@ -150,9 +149,7 @@ async function startApp() {
       : [];
 
   const totalPages =
-    data.page && data.page.totalPages
-      ? data.page.totalPages
-      : 1;
+    data.page && data.page.totalPages ? data.page.totalPages : 1;
 
   allEvents = events;
   renderEvents(allEvents);
@@ -165,7 +162,6 @@ if (searchInput) {
     filterAndRender(e.target.value);
   });
 }
-
 
 eventsContainer.addEventListener('click', e => {
   const card = e.target.closest('.event-element');
