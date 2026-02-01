@@ -7,7 +7,6 @@
   background-color: #0000007f;
   opacity: 1;
   z-index: 11;
-  overflow-y: scroll;
   transition:
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -23,12 +22,26 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -50%);
   width: 85%;
   max-width: 930px;
   padding: 62px 30px;
   background-color: #fff;
   border-radius: 300px 0;
+
+  @media screen and (max-width: 480px) {
+    max-height: 80%;
+    border-radius: 150px 0;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 47px 30px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-height: 90%;
+    padding: 47px 30px;
+  }
 }
 
 .btn-modal-close {
@@ -40,5 +53,97 @@
   color: rgb(103, 0, 172);
   border-radius: 50%;
   cursor: pointer;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #0e0e0e;
+    color: #dc56c5;
+  }
+}
+
+.modal-content {
+  padding: 10px 15%;
+
+  @media screen and (max-width: 480px) {
+    padding: 10px 4%;
+  }
+}
+
+.modal-event-info-title,
+.modal-event-title,
+.modal-event-place-name,
+.modal-event-time-name,
+.modal-event-prices-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #dc56c5;
+  margin-bottom: 4px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.modal-event-info,
+.modal-location,
+.modal-time,
+.modal-event-name,
+.modal-event-prices {
+  font-size: 18px;
+  font-weight: 400;
+  color: #0e0e0e;
+  margin-bottom: 40px;
+
+  &:nth-of-type(10),
+  &:nth-of-type(11),
+  &:nth-of-type(12) {
+    margin-bottom: 7px;
+  }
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
+}
+
+.modal-event-image {
+  display: block;
+  margin: 15 auto 30px;
+  border-radius: 6px;
+
+  @media screen and (max-width: 480px) {
+    width: 180px;
+  }
+}
+
+.modal-event-btn-buy {
+  background-color: #4c00fe;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.modal-prices {
+  @media screen and (max-height: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-right: 80px;
+  }
+  @media screen and (min-height: 1201px) {
+    display: block;
+  }
+}
+
+.modal-event-prices-compact,
+.modal-event-prices {
+  margin-bottom: 3px;
+}
+
+@media screen and (min-height: 1201px) {
+  .price-card:nth-of-type(2){
+    margin: 20px 0;
+}
 }

@@ -7,6 +7,15 @@ header {
   position: absolute;
   top: -15px;
   left: -15px;
+  width: 130px;
+
+  @media screen and (min-width: 568px) {
+    width: 150px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 230px;
+  }
 }
 
 .countries-block.is-open {

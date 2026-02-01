@@ -1,3 +1,6 @@
+// import countryList from './countries.json';
+
+let selectedCountry = '';
 let countries = [];
 
 async function loadCountries() {
@@ -18,32 +21,12 @@ const countriesBlock = document.querySelector('.countries-block');
 const modalBackdrop = document.querySelector('.modal-backdrop');
 const closeBtn = document.querySelector('.btn-modal-close');
 
+const modalContent = document.querySelector('.modal-content');
+
 let allEvents = [];
 let page = 1;
 const size = 20;
 let query = '';
-
-// function handleBtnClick() {
-//   countriesBlock.classList.toggle('is-open');
-//   if (!countriesBlock.classList.contains('is-open')) return;
-
-//   countriesBlock.innerHTML = '';
-
-//   countries.forEach(country => {
-//     const countryItem = document.createElement('div');
-//     countryItem.textContent = country.name;
-//     countryItem.classList.add('country-item');
-
-//     countryItem.addEventListener('click', () => {
-//       countriesBtn.textContent = country.name;
-//       countriesBlock.classList.remove('is-open');
-//     });
-
-//     countriesBlock.appendChild(countryItem);
-//   });
-// }
-
-// countriesBtn.addEventListener('click', handleBtnClick);
 
 async function getEvents() {
   let url = `${BASE_URL}?apikey=${API_KEY}&size=${size}&page=${page - 1}`;
@@ -155,6 +138,7 @@ async function startApp() {
   renderEvents(allEvents);
   renderPagination(totalPages);
   window.scrollTo(0, 0);
+  console.log(allEvents);
 }
 
 if (searchInput) {
@@ -163,11 +147,49 @@ if (searchInput) {
   });
 }
 
+function renderModal(event) {
+  modalContent.innerHTML = `
+    <img src="${getEventImage(event)}" width="280px" class="modal-event-image">
+    <p class="modal-event-info-title">Info</p>
+    <p class="modal-event-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iure maxime minus animi deserunt, aliquid soluta ipsa, suscipit quod saepe commodi asperiores quisquam temporibus totam sequi est vitae enim quidem!</p>
+    <p class="modal-event-title">Title</p>
+    <p class="modal-event-name">${event.name}</p>
+    <p class="modal-event-place-name">Where</p>
+    <span class="modal-location">${event._embedded.venues[0].country.name}, </span>
+    <span class="modal-location">${event._embedded.venues[0].city.name}</span>
+    <p class="modal-location">${event._embedded.venues[0].address.line1}</p>
+    <p class="modal-event-time-name">When</p>
+    <p class="modal-time" style="margin-bottom: 3px;">${event.dates.start.localDate}</p>
+    <p class="modal-time">${event.dates.start.localTime}</p>
+
+    <p class="modal-event-prices-title">Prices</p>
+
+    <div class="modal-prices-wrapper">
+    <div class="modal-prices">
+    <div class="price-card">
+    <p class="modal-event-prices modal-event-prices-compact">Standart<br>300–500 UAH</p>
+    <button type="button" class="modal-event-btn-buy">Buy Tickets</button>
+    </div>
+    <div class="price-card">
+    <p class="modal-event-prices modal-event-prices-compact">VIP<br>1000–1500 UAH</p>
+    <button type="button" class="modal-event-btn-buy">Buy Tickets</button>
+    </div>
+    </div>
+    </div>
+  `;
+}
+
 eventsContainer.addEventListener('click', e => {
   const card = e.target.closest('.event-element');
   if (!card) return;
 
-  toggleModal();
+  const eventId = card.dataset.id;
+  const event = allEvents.find(ev => ev.id === eventId);
+
+  if (event) {
+    renderModal(event);
+    toggleModal();
+  }
 });
 
 function toggleModal() {

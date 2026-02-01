@@ -10,3 +10,24 @@ body {
   background-color: rgb(14, 14, 14);
   overflow-x: hidden;
 }
+
+.container{
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 480px;
+
+  @media screen and (min-width: 768px) {
+    width: 610px;
+    max-width: 610px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 930px;
+    max-width: 930px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1140px;
+    max-width: 1140px;
+  }
+}
