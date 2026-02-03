@@ -22,6 +22,7 @@
   margin-top: 40px;
   margin-bottom: 100px;
   padding: 0 15px;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -47,7 +48,7 @@
   padding: 10px 20px;
   outline: none;
   backdrop-filter: blur(20px);
-  transition: border 300ms ease;
+  transition: all 300ms ease;
   width: 100%;
 
   @media screen and (min-width: 768px) {
@@ -70,6 +71,13 @@
   }
 }
 
+.hero-action-element.focus {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid rgb(255, 255, 255);
+  border-bottom: none;
+}
+
 #heroInputSearch,
 #heroBtnCountry {
   background-repeat: no-repeat;
@@ -80,9 +88,11 @@
 }
 
 #heroBtnCountry {
+  position: relative;
   background-image: url('../images/svg/Polygon1.svg');
-  padding: 0 100px 0 30px;
+  padding: 0 102px 0 10px;
   color: #939393;
+  min-width: 260px;
 }
 
 #heroInputSearch {
@@ -92,23 +102,46 @@
 .countries-block {
   display: none;
   position: absolute;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  margin-top: 10px;
+  top: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  color: rgb(222, 222, 222);
+  max-height: 300px;
+  overflow-y: auto;
   z-index: 10;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  background-color: #4f4f4f84;
+  border: 1px solid rgb(255, 255, 255);
+  border-bottom: 0;
+  border-top: 0;
+
+  scrollbar-color: rgb(57, 57, 57) #4f4f4f84;
+
+  @media screen and (min-width: 768px) {
+    right: 6.2%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    right: 21.8%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 25%;
+  }
 }
 
-.countries-block.is-open {
+.countries-block.is-active {
   display: block;
 }
 
-.country-item {
-  padding: 12px 18px;
+.countries-list-menu li {
+  transition: all 300ms ease;
   cursor: pointer;
-  transition: background 0.2s;
-}
+  border: none;
+  border-bottom: 1px solid white;
 
-.country-item:hover {
-  background: #f2f2f2;
+  &:hover{
+    color: rgb(255, 255, 255);
+  }
 }

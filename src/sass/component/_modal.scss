@@ -7,6 +7,8 @@
   background-color: #0000007f;
   opacity: 1;
   z-index: 11;
+  overflow: auto;
+  padding: 40px 15px;
   transition:
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -22,15 +24,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  overflow: auto;
   transform: translate(-50%, -50%);
   width: 85%;
   max-width: 930px;
   padding: 62px 30px;
-  background-color: #fff;
+  background-color: #ffffff;
+  max-height: 100%;
   border-radius: 300px 0;
 
   @media screen and (max-width: 480px) {
-    max-height: 80%;
     border-radius: 150px 0;
   }
 
@@ -39,7 +42,6 @@
   }
 
   @media screen and (min-width: 1024px) {
-    max-height: 90%;
     padding: 47px 30px;
   }
 }

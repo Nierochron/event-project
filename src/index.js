@@ -1,12 +1,3 @@
-// import countryList from './countries.json';
-
-let selectedCountry = '';
-let countries = [];
-
-async function loadCountries() {
-  const res = await fetch('./countries.json');
-  countries = await res.json();
-}
 
 const API_KEY = 'PGVpj5B2ke0spXMDy1QJDYveXLa7zjEE';
 const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events.json';
@@ -138,7 +129,6 @@ async function startApp() {
   renderEvents(allEvents);
   renderPagination(totalPages);
   window.scrollTo(0, 0);
-  console.log(allEvents);
 }
 
 if (searchInput) {
