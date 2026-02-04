@@ -57,9 +57,11 @@ button {
   cursor: pointer;
 }
 
-header {
+.header {
   position: relative;
   height: 80px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -77,15 +79,6 @@ header {
   .header-logo {
     width: 230px;
   }
-}
-
-.countries-block.is-open {
-  display: block;
-}
-
-.country-item {
-  padding: 5px;
-  border: 1px solid black;
 }
 
 .hero-title {
@@ -567,4 +560,93 @@ header {
   .price-card:nth-of-type(2) {
     margin: 20px 0;
   }
+}
+.change-theme-btn {
+  height: auto;
+  margin: 17px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  margin-top: 24px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  transition: all 300ms ease;
+}
+.change-theme-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-theme .change-theme-btn {
+  transition: all 300ms ease;
+}
+body.light-theme .change-theme-btn:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+body.light-theme {
+  background-image: url("../images/pic_white-mode.jpg");
+  background-color: rgb(240, 240, 240);
+  filter: contrast(90%);
+}
+
+body.light-theme .change-theme-btn {
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+body.light-theme .hero-action-element {
+  background-color: #d6d6d6;
+}
+body.light-theme .hero-action-element:hover {
+  border: 1px solid black;
+}
+body.light-theme .hero-action-element::-moz-placeholder {
+  color: #000000;
+}
+body.light-theme .hero-action-element::placeholder {
+  color: #000000;
+}
+
+body.light-theme .hero-action-element.focus {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid rgb(0, 0, 0);
+  border-bottom: none;
+}
+
+body.light-theme #heroBtnCountry {
+  color: #000000;
+}
+
+body.light-theme .countries-block {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(227, 227, 227, 0.5176470588);
+  color: rgb(0, 0, 0);
+  scrollbar-color: rgb(221, 221, 221) rgba(79, 79, 79, 0.5176470588);
+  border-top: transparent;
+}
+
+body.light-theme .countries-list-menu li {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+body.light-theme .event-time,
+body.light-theme .event-area {
+  color: #000000;
+}
+
+body.light-theme .pagination-btn {
+  color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+}
+body.light-theme .pagination-btn:hover {
+  color: rgb(255, 255, 255);
+}
+body.light-theme .pagination-btn.active {
+  background-color: #dc56c5;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=index.css.map */

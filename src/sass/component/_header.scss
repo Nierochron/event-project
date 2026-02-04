@@ -1,6 +1,8 @@
-header {
+.header {
   position: relative;
   height: 80px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -16,13 +18,4 @@ header {
   @media screen and (min-width: 1280px) {
     width: 230px;
   }
-}
-
-.countries-block.is-open {
-  display: block;
-}
-
-.country-item {
-  padding: 5px;
-  border: 1px solid black;
 }

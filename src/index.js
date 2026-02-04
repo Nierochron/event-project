@@ -1,10 +1,10 @@
-
 const API_KEY = 'PGVpj5B2ke0spXMDy1QJDYveXLa7zjEE';
 const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events.json';
 
 const eventsContainer = document.querySelector('.main-events-container');
 const paginationContainer = document.querySelector('.pagination-container');
 const searchInput = document.getElementById('heroInputSearch');
+const nothingFoundContainer = document.querySelector(".nothing-found-text-container")
 
 const countriesBtn = document.getElementById('heroBtnCountry');
 const countriesBlock = document.querySelector('.countries-block');
@@ -13,6 +13,8 @@ const modalBackdrop = document.querySelector('.modal-backdrop');
 const closeBtn = document.querySelector('.btn-modal-close');
 
 const modalContent = document.querySelector('.modal-content');
+
+const btn = document.querySelector(".change-theme-btn");
 
 let allEvents = [];
 let page = 1;
@@ -43,7 +45,7 @@ function getEventImage(event) {
 function renderEvents(events = []) {
   if (!events.length) {
     eventsContainer.innerHTML =
-      '<li class="event-element">No events found</li>';
+      '<p class="no-events-found" style="grid-column: 1 / -1; justify-self: center; text-align: center; color: #ffffffff; padding-bottom: 60px; font-size: 25px;">No results found <br /><span style="font-size: 15px;">We couldnt find what you searched for</span></p>';
     return;
   }
 
@@ -168,6 +170,10 @@ function renderModal(event) {
     </div>
   `;
 }
+
+btn.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+});
 
 eventsContainer.addEventListener('click', e => {
   const card = e.target.closest('.event-element');
