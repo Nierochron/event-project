@@ -224,6 +224,11 @@ button {
     right: 25%;
   }
 }
+@media screen and (min-width: 1440px) {
+  .countries-block {
+    right: 25.15%;
+  }
+}
 
 .countries-block.is-active {
   display: block;
